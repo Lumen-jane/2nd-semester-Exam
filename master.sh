@@ -1,4 +1,4 @@
-# Provisioning scripts
+#!bin/bash 
   config.vm.provision "shell", inline: <<-SHELL
     # Create new user and grant root privileges
     echo "Creating new user - altschool and granting root privileges..."
@@ -19,8 +19,6 @@
   SHELL
 end
 EOT
-
-vagrant up
 
 echo "Secure MySQL installation on VMs..."
 echo "Initializing MySQL with default user and password for master..."
